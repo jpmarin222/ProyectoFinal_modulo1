@@ -1,0 +1,16 @@
+appuser         1002       1002      
+webadmin        1003       1003      
+dev01           1004       1004      
+dev02           1005       1005      
+tempcontractor  1006       1006      
+monitoring      1007       1007      
+dbadmin         1008       1008      
+ciuser          1009       1009      
+secaudit        1010       1010      
+backupsvc       1011       1011      
+deployer        1012       1012      
+contractor01    1013       1013      
+ftpuser         1014       1014      
+jenkins         1015       1015      
+logger          1016       1016      
+scanner         1017       1017      

@@ -1,0 +1,101 @@
+::file{filename="security_random.log" type="text/plain"}
+Oct 24 08:22:01 srv-core useradd[13010]: new user: name=appuser, UID=1002, GID=1002, home=/home/appuser, shell=/bin/bash
+Oct 24 08:25:30 srv-core passwd[13015]: pam_unix(passwd:chauthtok): password changed for appuser
+Oct 24 09:15:44 srv-core useradd[13102]: new user: name=webadmin, UID=1003, GID=1003, home=/home/webadmin, shell=/bin/bash
+Oct 24 09:18:12 srv-core passwd[13107]: pam_unix(passwd:chauthtok): password changed for webadmin
+Oct 24 09:45:33 srv-core groupadd[13201]: new group: name=developers, GID=2001, system=0
+Oct 24 09:46:01 srv-core usermod[13205]: add 'webadmin' to group 'developers'
+Oct 24 10:02:18 srv-core useradd[13210]: new user: name=dev01, UID=1004, GID=1004, home=/home/dev01, shell=/bin/bash
+Oct 24 10:03:45 srv-core usermod[13215]: add 'dev01' to group 'developers'
+Oct 24 10:05:22 srv-core passwd[13220]: pam_unix(passwd:chauthtok): password changed for dev01
+Oct 24 10:30:55 srv-core useradd[13301]: new user: name=dev02, UID=1005, GID=1005, home=/home/dev02, shell=/bin/bash
+Oct 24 10:32:11 srv-core passwd[13306]: pam_unix(passwd:chauthtok): password changed for dev02
+Oct 24 10:33:40 srv-core usermod[13310]: add 'dev02' to group 'developers'
+Oct 24 11:05:27 srv-core sudo[13401]: dbrown : TTY=pts/2 ; PWD=/home/dbrown ; USER=root ; COMMAND=/usr/sbin/useradd tempcontractor
+Oct 24 11:06:15 srv-core useradd[13405]: new user: name=tempcontractor, UID=1006, GID=1006, home=/home/tempcontractor, shell=/bin/bash
+Oct 24 11:08:33 srv-core passwd[13410]: pam_unix(passwd:chauthtok): password changed for tempcontractor
+Oct 24 11:22:49 srv-core usermod[13420]: change user 'tempcontractor' from shell '/bin/bash' to shell '/sbin/nologin'
+Oct 24 11:45:02 srv-core groupadd[13501]: new group: name=ops, GID=2002, system=0
+Oct 24 11:46:30 srv-core usermod[13505]: add 'dbrown' to group 'ops'
+Oct 24 11:47:15 srv-core usermod[13510]: add 'webadmin' to group 'ops'
+Oct 24 12:10:38 srv-core useradd[13601]: new user: name=monitoring, UID=1007, GID=1007, home=/home/monitoring, shell=/bin/false
+Oct 24 12:12:55 srv-core usermod[13605]: add 'monitoring' to group 'ops'
+Oct 24 12:30:14 srv-core usermod[13701]: delete user 'tempcontractor'
+Oct 24 12:30:22 srv-core userdel[13705]: delete user 'tempcontractor'
+Oct 24 12:30:45 srv-core groupdel[13710]: delete group 'tempcontractor'
+Oct 24 13:05:29 srv-core passwd[13801]: pam_unix(passwd:chauthtok): password changed for dbrown
+Oct 24 13:15:44 srv-core usermod[13810]: change user 'dev01' shell from '/bin/bash' to shell '/bin/bash'
+Oct 24 13:30:18 srv-core groupadd[13901]: new group: name=dba, GID=2003, system=0
+Oct 24 13:31:42 srv-core usermod[13905]: add 'dbrown' to group 'dba'
+Oct 24 13:45:55 srv-core useradd[13910]: new user: name=dbadmin, UID=1008, GID=1008, home=/home/dbadmin, shell=/bin/bash
+Oct 24 13:47:20 srv-core passwd[13915]: pam_unix(passwd:chauthtok): password changed for dbadmin
+Oct 24 13:48:33 srv-core usermod[13920]: add 'dbadmin' to group 'dba'
+Oct 24 13:49:01 srv-core usermod[13925]: add 'dbadmin' to group 'ops'
+Oct 24 14:10:27 srv-core usermod[14001]: change UID of user 'dev01' from 1004 to 1014
+Oct 24 14:11:55 srv-core usermod[14005]: change GID of user 'dev01' from 1004 to 1014
+Oct 24 14:30:42 srv-core useradd[14101]: new user: name=ciuser, UID=1009, GID=1009, home=/home/ciuser, shell=/bin/bash
+Oct 24 14:32:08 srv-core passwd[14106]: pam_unix(passwd:chauthtok): password changed for ciuser
+Oct 24 14:33:30 srv-core usermod[14110]: add 'ciuser' to group 'developers'
+Oct 24 14:34:15 srv-core usermod[14115]: add 'ciuser' to group 'ops'
+Oct 24 15:05:39 srv-core groupadd[14201]: new group: name=security, GID=2004, system=0
+Oct 24 15:06:55 srv-core usermod[14205]: add 'dbrown' to group 'security'
+Oct 24 15:07:30 srv-core usermod[14210]: add 'dbadmin' to group 'security'
+Oct 24 15:22:18 srv-core useradd[14301]: new user: name=secaudit, UID=1010, GID=1010, home=/home/secaudit, shell=/bin/bash
+Oct 24 15:23:44 srv-core passwd[14306]: pam_unix(passwd:chauthtok): password changed for secaudit
+Oct 24 15:24:55 srv-core usermod[14310]: add 'secaudit' to group 'security'
+Oct 24 15:25:30 srv-core usermod[14315]: add 'secaudit' to group 'ops'
+Oct 24 15:45:27 srv-core usermod[14401]: change comment of user 'appuser' to 'Application Service Account'
+Oct 24 16:05:14 srv-core useradd[14501]: new user: name=backupsvc, UID=1011, GID=1011, home=/home/backupsvc, shell=/bin/false
+Oct 24 16:06:33 srv-core usermod[14505]: add 'backupsvc' to group 'ops'
+Oct 24 16:15:49 srv-core passwd[14510]: pam_unix(passwd:chauthtok): password changed for backupsvc
+Oct 24 16:30:22 srv-core groupadd[14601]: new group: name=webteam, GID=2005, system=0
+Oct 24 16:31:45 srv-core usermod[14605]: add 'webadmin' to group 'webteam'
+Oct 24 16:32:20 srv-core usermod[14610]: add 'dev01' to group 'webteam'
+Oct 24 16:33:01 srv-core usermod[14615]: add 'dev02' to group 'webteam'
+Oct 24 17:05:38 srv-core usermod[14701]: change shell of user 'monitoring' from '/bin/false' to shell '/bin/bash'
+Oct 24 17:15:12 srv-core useradd[14801]: new user: name=deployer, UID=1012, GID=1012, home=/home/deployer, shell=/bin/bash
+Oct 24 17:16:33 srv-core passwd[14806]: pam_unix(passwd:chauthtok): password changed for deployer
+Oct 24 17:17:55 srv-core usermod[14810]: add 'deployer' to group 'ops'
+Oct 24 17:18:30 srv-core usermod[14815]: add 'deployer' to group 'developers'
+Oct 24 17:30:44 srv-core usermod[14901]: delete user 'ciuser'
+Oct 24 17:30:52 srv-core userdel[14905]: delete user 'ciuser'
+Oct 24 17:31:15 srv-core groupdel[14910]: delete group 'ciuser'
+Oct 24 18:05:29 srv-core passwd[15001]: pam_unix(passwd:chauthtok): password changed for dev01
+Oct 24 18:15:42 srv-core passwd[15005]: pam_unix(passwd:chauthtok): password changed for dev02
+Oct 24 18:30:18 srv-core usermod[15101]: change comment of user 'dev01' to 'Junior Developer'
+Oct 24 18:31:45 srv-core usermod[15105]: change comment of user 'dev02' to 'Mid-level Developer'
+Oct 25 08:10:33 srv-core useradd[15201]: new user: name=contractor01, UID=1013, GID=1013, home=/home/contractor01, shell=/bin/bash
+Oct 25 08:12:01 srv-core passwd[15206]: pam_unix(passwd:chauthtok): password changed for contractor01
+Oct 25 08:13:22 srv-core usermod[15210]: add 'contractor01' to group 'developers'
+Oct 25 08:45:15 srv-core usermod[15301]: change shell of user 'contractor01' from '/bin/bash' to shell '/sbin/nologin'
+Oct 25 09:05:28 srv-core useradd[15401]: new user: name=ftpuser, UID=1014, GID=1014, home=/srv/ftp, shell=/usr/sbin/nologin
+Oct 25 09:06:55 srv-core passwd[15406]: pam_unix(passwd:chauthtok): password changed for ftpuser
+Oct 25 09:30:42 srv-core groupadd[15501]: new group: name=ftpusers, GID=2006, system=0
+Oct 25 09:31:18 srv-core usermod[15505]: add 'ftpuser' to group 'ftpusers'
+Oct 25 10:05:39 srv-core usermod[15601]: change home directory of user 'appuser' from '/home/appuser' to '/opt/appuser'
+Oct 25 10:15:27 srv-core passwd[15605]: pam_unix(passwd:chauthtok): password changed for webadmin
+Oct 25 10:30:14 srv-core useradd[15701]: new user: name=jenkins, UID=1015, GID=1015, home=/home/jenkins, shell=/bin/bash
+Oct 25 10:31:42 srv-core passwd[15706]: pam_unix(passwd:chauthtok): password changed for jenkins
+Oct 25 10:32:55 srv-core usermod[15710]: add 'jenkins' to group 'ops'
+Oct 25 10:33:30 srv-core usermod[15715]: add 'jenkins' to group 'developers'
+Oct 25 10:34:01 srv-core usermod[15720]: add 'jenkins' to group 'webteam'
+Oct 25 11:05:18 srv-core usermod[15801]: delete user 'ftpuser'
+Oct 25 11:05:26 srv-core userdel[15805]: delete user 'ftpuser'
+Oct 25 11:05:45 srv-core groupdel[15810]: delete group 'ftpusers'
+Oct 25 11:30:33 srv-core groupadd[15901]: new group: name=release, GID=2007, system=0
+Oct 25 11:31:55 srv-core usermod[15905]: add 'deployer' to group 'release'
+Oct 25 11:32:20 srv-core usermod[15910]: add 'jenkins' to group 'release'
+Oct 25 12:05:42 srv-core passwd[16001]: pam_unix(passwd:chauthtok): password changed for dbrown
+Oct 25 12:15:28 srv-core usermod[16005]: change UID of user 'webadmin' from 1003 to 1023
+Oct 25 12:30:15 srv-core useradd[16101]: new user: name=logger, UID=1016, GID=1016, home=/home/logger, shell=/bin/false
+Oct 25 12:31:33 srv-core passwd[16106]: pam_unix(passwd:chauthtok): password changed for logger
+Oct 25 12:32:55 srv-core usermod[16110]: add 'logger' to group 'ops'
+Oct 25 13:05:44 srv-core usermod[16201]: change comment of user 'dbadmin' to 'Database Administrator'
+Oct 25 13:15:19 srv-core useradd[16301]: new user: name=scanner, UID=1017, GID=1017, home=/home/scanner, shell=/bin/bash
+Oct 25 13:16:42 srv-core passwd[16306]: pam_unix(passwd:chauthtok): password changed for scanner
+Oct 25 13:17:55 srv-core usermod[16310]: add 'scanner' to group 'security'
+Oct 25 13:18:30 srv-core usermod[16315]: add 'scanner' to group 'ops'
+Oct 25 14:05:27 srv-core usermod[16401]: change shell of user 'backupsvc' from '/bin/false' to shell '/bin/bash'
+Oct 25 14:15:55 srv-core passwd[16405]: pam_unix(passwd:chauthtok): password changed for secaudit
+Oct 25 14:30:18 srv-core usermod[16501]: change home directory of user 'deployer' from '/home/deployer' to '/srv/deployer'
+Oct 25 15:05:42 srv-core groupadd[16601]: new group: name=automation, GID=2008, system=0
