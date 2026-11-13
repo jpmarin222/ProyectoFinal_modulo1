@@ -1,0 +1,4 @@
+3
+DatoInvalido
+DISCO 150
+PROCESOS 10

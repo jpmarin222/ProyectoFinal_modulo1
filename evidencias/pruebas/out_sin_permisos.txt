@@ -1,0 +1,25 @@
+INFORME DE MONITOREO
+Etiqueta: SinPermisos
+Registros: 2
+
+Categoría DISCO
+Cantidad: 1
+Suma: 45
+Mínimo: 45
+Máximo: 45
+Promedio: 45.00
+Alertas: 0
+
+Categoría PROCESOS
+Cantidad: 1
+Suma: 12
+Mínimo: 12
+Máximo: 12
+Promedio: 12.00
+Alertas: 0
+
+Categoría PERMISOS
+Sin datos
+
+Observaciones que cumplen condiciones de alerta: 0.
+Umbrales utilizados con fines didácticos.

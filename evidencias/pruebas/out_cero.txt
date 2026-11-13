@@ -1,0 +1,15 @@
+INFORME DE MONITOREO
+Etiqueta: PruebaCero
+Registros: 0
+
+Categoría DISCO
+Sin datos
+
+Categoría PROCESOS
+Sin datos
+
+Categoría PERMISOS
+Sin datos
+
+Observaciones que cumplen condiciones de alerta: 0.
+Umbrales utilizados con fines didácticos.

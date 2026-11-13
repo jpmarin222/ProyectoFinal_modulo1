@@ -1,0 +1,4 @@
+2
+SinPermisos
+DISCO 45
+PROCESOS 12

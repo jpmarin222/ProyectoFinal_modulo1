@@ -1,0 +1,10 @@
+DOCUMENTACION DE PERMISOS - SEC_GUARD
+
+1. Directorios (750 / rwxr-x---):
+- Permite lectura, escrittura y ejecucion al propietario, lectura y ejecucion al grupo, bloquea acceso a otros.
+
+2. Archivos de Datos y Codigo (640 / rw-r-----):
+- Otorga lectura y escritura al creador y solo lectura al grupo.
+
+3. Scripts de Ejecucion (750 / rwxr-x---):
+- Permite ejecucion al propietario y al grupo de trabajo.
